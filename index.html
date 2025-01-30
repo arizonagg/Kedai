@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Kedai Dadaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Logo Kedai" class="logo">
+    </header>
+
+    <div class="menu">
+        <h2>Makanan</h2>
+        <div class="menu-item">
+            <img src="images/telor.webp" alt="Telur Dadar/Ceplok + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Telur Dadar/Ceplok + Nasi</h3>
+                <p>Rp 10.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Telur Dadar/Ceplok + Nasi', -1)">-</button>
+                    <span id="qty-Telur Dadar/Ceplok + Nasi">0</span>
+                    <button onclick="updateQuantity('Telur Dadar/Ceplok + Nasi', 1)">+</button>
+                    <button onclick="addToCart('Telur Dadar/Ceplok + Nasi', 10000, 'images/telor.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="menu-item">
+            <img src="images/ayam.webp" alt="Ayam Kremes + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Ayam Kremes + Nasi</h3>
+                <p>Rp 15.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Ayam Kremes + Nasi', -1)">-</button>
+                    <span id="qty-Ayam Kremes + Nasi">0</span>
+                    <button onclick="updateQuantity('Ayam Kremes + Nasi', 1)">+</button>
+                    <button onclick="addToCart('Ayam Kremes + Nasi', 15000, 'images/ayam.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/tempe.webp" alt="Tahu Tempe + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Tahu Tempe + Nasi</h3>
+                <p>Rp 8.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Tahu Tempe + Nasi', -1)">-</button>
+                    <span id="qty-Tahu Tempe + Nasi">0</span>
+                    <button onclick="updateQuantity('Tahu Tempe + Nasi', 1)">+</button>
+                    <button onclick="addToCart('Tahu Tempe + Nasi', 15000, 'images/tempe.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="images/aya.webp" alt="Nasi Putih" class="menu-img">
+            <div class="menu-info">
+                <h3>Nasi Putih</h3>
+                <p>Rp 4.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Nasi putih', -1)">-</button>
+                    <span id="qty-Nasi putih">0</span>
+                    <button onclick="updateQuantity('Nasi putih', 1)">+</button>
+                    <button onclick="addToCart('Nasi putih', 4000, 'images/ayam.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+
+        <h2>Snack</h2>
+        <div class="menu-item">
+            <img src="images/telor.webp" alt="Telur Dadar/Ceplok + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Kentang Goreng</h3>
+                <p>Rp 7.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Kentang Goreng', -1)">-</button>
+                    <span id="qty-Kentang Goreng">0</span>
+                    <button onclick="updateQuantity('Kentang Goreng', 1)">+</button>
+                    <button onclick="addToCart('Kentang Goreng', 10000, 'images/telor.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="menu-item">
+            <img src="images/ayam.webp" alt="Ayam Kremes + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Cireng Salju</h3>
+                <p>Rp 8.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Ayam Kremes + Nasi', -1)">-</button>
+                    <span id="qty-Ayam Kremes + Nasi">0</span>
+                    <button onclick="updateQuantity('Ayam Kremes + Nasi', 1)">+</button>
+                    <button onclick="addToCart('Ayam Kremes + Nasi', 15000, 'images/ayam.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+
+        <h2>Minuman</h2>
+        <div class="menu-item">
+            <img src="images/telor.webp" alt="Telur Dadar/Ceplok + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Es Teh</h3>
+                <p>Rp 5.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Telur Dadar/Ceplok + Nasi', -1)">-</button>
+                    <span id="qty-Telur Dadar/Ceplok + Nasi">0</span>
+                    <button onclick="updateQuantity('Telur Dadar/Ceplok + Nasi', 1)">+</button>
+                    <button onclick="addToCart('Telur Dadar/Ceplok + Nasi', 10000, 'images/telor.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="menu-item">
+            <img src="images/ayam.webp" alt="Ayam Kremes + Nasi" class="menu-img">
+            <div class="menu-info">
+                <h3>Es Jeruk</h3>
+                <p>Rp 5.000</p>
+                <div class="menu-actions">
+                    <button onclick="updateQuantity('Ayam Kremes + Nasi', -1)">-</button>
+                    <span id="qty-Ayam Kremes + Nasi">0</span>
+                    <button onclick="updateQuantity('Ayam Kremes + Nasi', 1)">+</button>
+                    <button onclick="addToCart('Ayam Kremes + Nasi', 15000, 'images/ayam.webp')">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Popup Gambar -->
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="close">&times;</span>
+        <img id="popup-img" class="popup-content">
+        <p id="popup-caption"></p>
+    </div>
+
+<!-- Tombol Keranjang Melayang -->
+<button id="cart-button" onclick="toggleCart()">🛒 Keranjang (<span id="cart-count">0</span>)</button>
+
+<!-- Overlay untuk modal -->
+<div id="cart-overlay" onclick="toggleCart()"></div>
+
+<!-- Modal Keranjang -->
+<div id="cart-modal">
+    <div class="cart-content">
+        <span class="close-btn" onclick="toggleCart()">✖</span>
+        <h2>🛍️ Keranjang Belanja</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: Rp 0</p>
+        <button class="checkout-btn" onclick="checkout()">✅ Checkout</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-item">
+            <a href="https://wa.me/6285136060529" target="_blank">
+                📞 WhatsApp: +62 851-3606-0529
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="https://www.instagram.com/kedaidadaran.id" target="_blank">
+                📷 Instagram: kedaidadaran.id
+            </a>
+        </div>
+        <div class="footer-item">
+            <a href="#">
+                📍 Lokasi: Jl. RA Kartini, Bulakrejo Gang 1, Warujayeng, Nganjuk
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
