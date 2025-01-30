@@ -246,6 +246,7 @@ button:hover {
     cursor: pointer;
     color: #ff0000;
     transition: 0.3s;
+    background: white;
 }
 
 .close-btn:hover {

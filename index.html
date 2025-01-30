@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="menu-item">
-            <img src="images/aya.webp" alt="Nasi Putih" class="menu-img">
+            <img src="images/ayam.webp" alt="Nasi Putih" class="menu-img">
             <div class="menu-info">
                 <h3>Nasi Putih</h3>
                 <p>Rp 4.000</p>
@@ -78,7 +78,7 @@
                     <button onclick="updateQuantity('Kentang Goreng', -1)">-</button>
                     <span id="qty-Kentang Goreng">0</span>
                     <button onclick="updateQuantity('Kentang Goreng', 1)">+</button>
-                    <button onclick="addToCart('Kentang Goreng', 10000, 'images/telor.webp')">Tambah</button>
+                    <button onclick="addToCart('Kentang Goreng', 7000, 'images/telor.webp')">Tambah</button>
                 </div>
             </div>
         </div>
@@ -89,39 +89,39 @@
                 <h3>Cireng Salju</h3>
                 <p>Rp 8.000</p>
                 <div class="menu-actions">
-                    <button onclick="updateQuantity('Ayam Kremes + Nasi', -1)">-</button>
-                    <span id="qty-Ayam Kremes + Nasi">0</span>
-                    <button onclick="updateQuantity('Ayam Kremes + Nasi', 1)">+</button>
-                    <button onclick="addToCart('Ayam Kremes + Nasi', 15000, 'images/ayam.webp')">Tambah</button>
+                    <button onclick="updateQuantity('Cireng Salju', -1)">-</button>
+                    <span id="qty-Cireng Salju">0</span>
+                    <button onclick="updateQuantity('Cireng Salju', 1)">+</button>
+                    <button onclick="addToCart('Cireng Salju', 8000, 'images/ayam.webp')">Tambah</button>
                 </div>
             </div>
         </div>
 
         <h2>Minuman</h2>
         <div class="menu-item">
-            <img src="images/telor.webp" alt="Telur Dadar/Ceplok + Nasi" class="menu-img">
+            <img src="images/esteh.webp" alt="Es Teh" class="menu-img">
             <div class="menu-info">
                 <h3>Es Teh</h3>
                 <p>Rp 5.000</p>
                 <div class="menu-actions">
-                    <button onclick="updateQuantity('Telur Dadar/Ceplok + Nasi', -1)">-</button>
-                    <span id="qty-Telur Dadar/Ceplok + Nasi">0</span>
-                    <button onclick="updateQuantity('Telur Dadar/Ceplok + Nasi', 1)">+</button>
-                    <button onclick="addToCart('Telur Dadar/Ceplok + Nasi', 10000, 'images/telor.webp')">Tambah</button>
+                    <button onclick="updateQuantity('Es Teh', -1)">-</button>
+                    <span id="qty-Es Teh">0</span>
+                    <button onclick="updateQuantity('Es Teh', 1)">+</button>
+                    <button onclick="addToCart('Es Teh', 5000, 'images/telor.webp')">Tambah</button>
                 </div>
             </div>
         </div>
     
         <div class="menu-item">
-            <img src="images/ayam.webp" alt="Ayam Kremes + Nasi" class="menu-img">
+            <img src="images/esteh.webp" alt="Es Jeruk" class="menu-img">
             <div class="menu-info">
                 <h3>Es Jeruk</h3>
                 <p>Rp 5.000</p>
                 <div class="menu-actions">
-                    <button onclick="updateQuantity('Ayam Kremes + Nasi', -1)">-</button>
-                    <span id="qty-Ayam Kremes + Nasi">0</span>
-                    <button onclick="updateQuantity('Ayam Kremes + Nasi', 1)">+</button>
-                    <button onclick="addToCart('Ayam Kremes + Nasi', 15000, 'images/ayam.webp')">Tambah</button>
+                    <button onclick="updateQuantity('Es Jeruk', -1)">-</button>
+                    <span id="qty-Es Jeruk">0</span>
+                    <button onclick="updateQuantity('Es Jeruk', 1)">+</button>
+                    <button onclick="addToCart('Es Jeruk', 5000, 'images/esteh.webp')">Tambah</button>
                 </div>
             </div>
         </div>
@@ -144,11 +144,11 @@
 <!-- Modal Keranjang -->
 <div id="cart-modal">
     <div class="cart-content">
-        <span class="close-btn" onclick="toggleCart()">✖</span>
-        <h2>🛍️ Keranjang Belanja</h2>
+        <span class="close-btn" onclick="toggleCart()">X</span>
+        <h2>🛍️ Pesanan Anda</h2>
         <ul id="cart-items"></ul>
         <p id="total-price">Total: Rp 0</p>
-        <button class="checkout-btn" onclick="checkout()">✅ Checkout</button>
+        <button class="checkout-btn" onclick="checkout()">✅ Pesan Sekarang</button>
     </div>
 </div>
 

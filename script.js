@@ -66,11 +66,19 @@ function checkout() {
     }
 
     let orderText = "Halo, saya ingin memesan:\n";
+    let totalPrice = 0;
+
     for (let item in cart) {
-        orderText += `- ${item} x${cart[item].qty}\n`;
+        let totalItemPrice = cart[item].qty * cart[item].price;
+        orderText += `- ${item} x${cart[item].qty} = Rp ${totalItemPrice.toLocaleString()}\n`;
+        totalPrice += totalItemPrice;
     }
+
+    orderText += `\nTotal harga: Rp ${totalPrice.toLocaleString()}`;
 
     let waLink = `https://wa.me/6285136060529?text=${encodeURIComponent(orderText)}`;
     window.open(waLink, "_blank");
 }
+
+
 
