@@ -70,7 +70,7 @@ function checkout() {
         orderText += `- ${item} x${cart[item].qty}\n`;
     }
 
-    let waLink = `https://wa.me/6281234567890?text=${encodeURIComponent(orderText)}`;
+    let waLink = `https://wa.me/6285136060529?text=${encodeURIComponent(orderText)}`;
     window.open(waLink, "_blank");
 }
 
