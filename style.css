@@ -178,6 +178,26 @@ button:hover {
     transition: transform 0.3s ease-in-out;
 }
 
+.cart-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.cart-form input,
+.cart-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart-form textarea {
+    height: 60px;
+}
+
+
 /* Tombol Close (X) */
 .close-btn {
     position: absolute;

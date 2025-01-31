@@ -65,7 +65,16 @@ function checkout() {
         return;
     }
 
-    let orderText = "Halo, saya ingin memesan:\n";
+    let name = document.getElementById("customer-name").value.trim();
+    let phone = document.getElementById("customer-phone").value.trim();
+    let address = document.getElementById("customer-address").value.trim();
+
+    if (name === "" || phone === "" || address === "") {
+        alert("Harap isi Nama, Nomor WhatsApp, dan Alamat sebelum checkout.");
+        return;
+    }
+
+    let orderText = `Halo, saya ingin memesan:\n`;
     let totalPrice = 0;
 
     for (let item in cart) {
@@ -74,11 +83,13 @@ function checkout() {
         totalPrice += totalItemPrice;
     }
 
-    orderText += `\nTotal harga: Rp ${totalPrice.toLocaleString()}`;
+    orderText += `\nTotal harga: Rp ${totalPrice.toLocaleString()}\n\n`;
+    orderText += `👤 Nama: ${name}\n📞 Nomor WA: ${phone}\n📍 Alamat: ${address}`;
 
     let waLink = `https://wa.me/6285136060529?text=${encodeURIComponent(orderText)}`;
     window.open(waLink, "_blank");
 }
+
 
 
 
