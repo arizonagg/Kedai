@@ -58,11 +58,80 @@ function toggleCart() {
     }
 }
 
+function toggleDropdown() {
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+
+function filterMenu(category) {
+    let items = document.querySelectorAll('.menu-item');
+    let titles = document.querySelectorAll('.food');
+    const buttons = document.querySelectorAll('.dropdown-content button');
+
+    // Sembunyikan semua item dan judul kategori
+    items.forEach(item => {
+        item.style.display = 'none';
+    });
+
+    titles.forEach(title => {
+        title.style.display = 'none';
+    });
+
+    // Jika kategori 'all' dipilih, tampilkan semua item dan judulnya
+    if (category === 'all') {
+        items.forEach(item => {
+            item.style.display = 'flex';
+        });
+        titles.forEach(title => {
+            title.style.display = 'block';
+        });
+        return;
+    }
+
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Tambahkan kelas active ke tombol yang dipilih
+    event.target.classList.add('active');
+
+
+    // Tampilkan hanya item yang sesuai dengan kategori yang dipilih
+    document.querySelectorAll(`.menu-item[data-category="${category}"]`).forEach(item => {
+        item.style.display = 'flex';
+    });
+
+    // Tampilkan judul kategori hanya jika ada item dalam kategori tersebut
+    document.querySelectorAll(`h2.food`).forEach(title => {
+        let nextItem = title.nextElementSibling;
+        while (nextItem && !nextItem.matches('h2.food')) {
+            if (nextItem.matches(`.menu-item[data-category="${category}"]`)) {
+                title.style.display = 'block';
+                break;
+            }
+            nextItem = nextItem.nextElementSibling;
+        }
+    });
+}
 
 function checkout() {
     if (Object.keys(cart).length === 0) {
         alert("Keranjang masih kosong!");
         return;
+        cart = {};
+        updateCart();
+
     }
 
     let name = document.getElementById("customer-name").value.trim();

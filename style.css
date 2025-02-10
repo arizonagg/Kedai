@@ -17,6 +17,51 @@ header {
     height: 150px;
 }
 
+.filter-container {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-button {
+    margin-top: 20px;
+    width: 350px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content button {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: black;
+}
+.dropdown-content button.active {
+    background-color: black;
+    color: white;
+}
+
+.show {
+    display: block;
+}
+
 .food {
     width: 50%;
     background-color: red;
@@ -37,7 +82,7 @@ header {
 }
 
 .menu h2 {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* Setiap Item Menu */
@@ -125,10 +170,6 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
-}
-
-button:hover {
-    background: #1ebea5;
 }
 
 /* Popup Gambar */
